@@ -1,9 +1,33 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title> My name is Mason!!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Checker</title>
+    <script>
+        function checkAge() {
+            // Get the value from the input field
+            const age = parseInt(document.getElementById('ageInput').value);
+            let message = '';
+
+            // Check if age is above or below 50
+            if (age > 50) {
+                message = "You are old";
+            } else {
+                message = "You are young";
+            }
+
+            // Display the message
+            document.getElementById('result').innerText = message;
+        }
+    </script>
 </head>
 <body>
-<p>Hey this is Mason! I am a gerat coder, love math, and work harder than any other hacker and math dude!! This website will be awesome!</p>
+    <h1>Age Checker</h1>
+    <label for="ageInput">Enter your age:</label>
+    <input type="number" id="ageInput" placeholder="Enter age" />
+    <button onclick="checkAge()">Check Age</button>
+
+    <p id="result"></p>
 </body>
 </html>
