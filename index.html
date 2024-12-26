@@ -7,14 +7,18 @@
     <script>
         function checkAge() {
             // Get the value from the input field
-            const age = parseInt(document.getElementById('ageInput').value);
+            const name = document.getElementById('name').value;
             let message = '';
 
             // Check if age is above or below 50
-            if (age > 50) {
-                message = "You are old";
-            } else {
-                message = "You are young";
+            if (name === "Megan") {
+                message = "You smell like a foot";
+            } else if (name === "Mason") {
+                message = "You smell like flowers";
+            } else if (name === "Tor") {
+                message = "You smell a stinky brother";
+            } else if (name === "Karen") {
+                message = "You smell like coke";
             }
 
             // Display the message
@@ -23,9 +27,9 @@
     </script>
 </head>
 <body>
-    <h1>Age Checker</h1>
+    <h1>Small Checker</h1>
     <label for="ageInput">Enter your age:</label>
-    <input type="number" id="ageInput" placeholder="Enter age" />
+    <input type="string" id="name" placeholder="Enter name" />
     <button onclick="checkAge()">Check Age</button>
 
     <p id="result"></p>
