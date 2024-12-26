@@ -6,7 +6,6 @@
     <title>Age Checker</title>
     <script>
         function checkAge() {
-            // Get the value from the input field
             const name = document.getElementById('name').value.trim();
             let message = '';
 
@@ -32,8 +31,19 @@
             else {
                 message = "I don't know how you smell. Please try again"
             }
+            document.getElementById('result').innerText = message;
+        }
+        function checkPassword() {
+            // Get the value from the input field
+            const pass = document.getElementById('password').value.trim();
+            let message = '';
 
-            // Display the message
+            if (pass === "7159") {
+                message = "good work person good good good work";
+            }
+            else {
+                message = "try again"
+            }
             document.getElementById('result').innerText = message;
         }
     </script>
@@ -43,7 +53,12 @@
     <label for="ageInput">Enter your name:</label>
     <input type="string" id="name" placeholder="Enter name" />
     <button onclick="checkAge()">Check Smell</button>
-
     <p id="result"></p>
+
+    <h1>Secret Message</h1>
+    <label for="pawsswordInput">Enter the password:</label>
+    <input type="string" id="password" placeholder="Enter password" />
+    <button onclick="checkPassword()">Check Password</button>
+    <p id="passwordResult"></p>
 </body>
 </html>
