@@ -45,6 +45,12 @@
             }
             else if (name ===  "Charlotte") {
                 message = "You smell like you love tor"
+            } 
+            else if (name ===  "Taylor") {
+                message = "You smell like you farded"
+            }
+            else if (name ===  "Eric") {
+                message = "You smell like you pooped"
             }
             else {
                 message = "I don't know how you smell. Please try again"
@@ -90,8 +96,8 @@
             document.getElementById('calculatorResult').innerText = result;
         }
         function newfunc() {
-            let result = Math.floor(Math.random()*10);
-            document.getElementById('randomResult').innerText = result;
+            let result = Math.floor(Math.random()*6) + 1;
+            document.getElementById('diceResult').innerText = result;
         }
 
     </script>
@@ -116,8 +122,8 @@
     <button onclick="calculator()">Calculate</button>
     <p id="calculatorResult"></p>
 
-    <h1>Random</h1>
-    <button onclick="newfunc()">Random</button>
-    <p id="randomResult"></p>
+    <h1>Roll Dice</h1>
+    <button onclick="newfunc()">Roll Dice</button>
+    <p id="diceResult"></p>
 </body>
 </html>
