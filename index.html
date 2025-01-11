@@ -89,6 +89,11 @@
             }
             document.getElementById('calculatorResult').innerText = result;
         }
+        function newfunc() {
+            let result = Math.floor(Math.random()*10);
+            document.getElementById('randomResult').innerText = result;
+        }
+
     </script>
 </head>
 <body>
@@ -110,5 +115,9 @@
     <input type="string" id="secondNumber" placeholder="Second Number" />
     <button onclick="calculator()">Calculate</button>
     <p id="calculatorResult"></p>
+
+    <h1>Random</h1>
+    <button onclick="newfunc()">Random</button>
+    <p id="randomResult"></p>
 </body>
 </html>
