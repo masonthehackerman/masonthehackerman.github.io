@@ -3,110 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Age Checker</title>
-    <script>
-        function checkAge() {
-            const name = document.getElementById('name').value.trim();
-            let message = '';
-
-            if (name === "Megan") {
-                message = "You smell like a foot";
-            } else if (name === "Mason") {
-                message = "You smell like flowers";
-            } else if (name === "Tor") {
-                message = "You smell like a stinky brother";
-            } else if (name === "Karen") {
-                message = "You smell like coke";
-            } else if (name === "Hayden") {
-                message = "You smell smarter than Tor";
-            } else if (name ===  "Wendy") {
-                message = "You smell like a bee"
-            } else if (name ===  "Marc") {
-                message = "You smell like a working man"
-            } else if (name ===  "Roy") {
-                message = "You smell like a farmer"
-            } else if (name ===  "Brian") {
-                message = "You smell like a phone"
-            }
-            else if (name ===  "Brandon") {
-                message = "You smell like a fart bug"
-            }
-            else if (name ===  "Nina") {
-                message = "You smell like you love Hayden"
-            }
-            else if (name ===  "Brooks") {
-                message = "You smell like a good baby"
-            }
-            else if (name ===  "Gary") {
-                message = "You smell like a good bird"
-            }
-            else if (name ===  "Craig") {
-                message = "You smell like good dad"
-            }
-            else if (name ===  "Charlotte") {
-                message = "You smell like you love tor"
-            } 
-            else if (name ===  "Taylor") {
-                message = "You smell like you farded"
-            }
-            else if (name ===  "Eric") {
-                message = "You smell like you pooped"
-            }
-            else {
-                message = "I don't know how you smell. Please try again"
-            }
-            document.getElementById('result').innerText = message;
-        }
-        function checkPassword() {
-            const pass = document.getElementById('password').value.trim();
-            let message = '';
-
-            if (pass === "7159") {
-                message = "good work person good good good work";
-            }
-            else {
-                message = "try again"
-            }
-            document.getElementById('passwordResult').innerText = message;
-        }
-        function calculator() {
-            const firstNumber = Number(document.getElementById('firstNumber').value.trim());
-            const secondNumber = Number(document.getElementById('secondNumber').value.trim());
-            const operator = document.getElementById('operator').value.trim();
-            let result = '';
-
-            if (operator === "+") {
-                result = firstNumber + secondNumber
-            }
-            if (operator === "X") {
-                result = firstNumber * secondNumber
-            }
-            if (operator === "*") {
-                result = firstNumber * secondNumber
-            }
-            if (operator === "x") {
-                result = firstNumber * secondNumber
-            }
-            if (operator === "/") {
-                result = firstNumber / secondNumber
-            }
-            if (operator === "-") {
-                result = firstNumber - secondNumber
-            }
-            document.getElementById('calculatorResult').innerText = result;
-        }
-        function newfunc() {
-            let result = Math.floor(Math.random()*6) + 1;
-            document.getElementById('diceResult').innerText = result;
-        }
-
-    </script>
+    <script src="checkSmell.js"></script>
+    <script src="checkPassword.js"></script>
+    <script src="calculator.js"></script>
+    <script src="dice.js"></script>
 </head>
 <body>
     <h1>Smell Checker</h1>
     <label for="ageInput">Enter your name:</label>
     <input type="string" id="name" placeholder="Enter name" />
-    <button onclick="checkAge()">Check Smell</button>
+    <button onclick="checkSmell()">Check Smell</button>
     <p id="result"></p>
 
     <h1>Secret Message</h1>
@@ -123,7 +29,7 @@
     <p id="calculatorResult"></p>
 
     <h1>Roll Dice</h1>
-    <button onclick="newfunc()">Roll Dice</button>
+    <button onclick="dice()">Roll Dice</button>
     <p id="diceResult"></p>
 </body>
 </html>
