@@ -63,6 +63,20 @@
             }
             document.getElementById('passwordResult').innerText = message;
         }
+        function calculator() {
+            const firstNumber = document.getElementById('firstNumber').value.trim();
+            const secondNumber = document.getElementById('secondNumber').value.trim();
+            const operator = document.getElementById('operator').value.trim();
+            let message = '';
+
+            if (pass === "7159") {
+                message = "good work person good good good work";
+            }
+            else {
+                message = "try again"
+            }
+            document.getElementById('calculatorResult').innerText = message;
+        }
     </script>
 </head>
 <body>
@@ -77,5 +91,15 @@
     <input type="string" id="password" placeholder="Enter secret" />
     <button onclick="checkPassword()">Check Password</button>
     <p id="passwordResult"></p>
+
+    <h1>Calculator</h1>
+    <label for="firstNumber">Enter the first number:</label>
+    <input type="string" id="firstNumber" placeholder="First Number" />
+    <label for="operator">Enter the operator:</label>
+    <input type="string" id="operator" placeholder="First Number" />
+    <label for="secondNumber">Enter the second number:</label>
+    <input type="string" id="secondNumber" placeholder="Second Number" />
+    <button onclick="calculator()">Calculate</button>
+    <p id="calculatorResult"></p>
 </body>
 </html>
