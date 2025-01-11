@@ -64,18 +64,18 @@
             document.getElementById('passwordResult').innerText = message;
         }
         function calculator() {
-            const firstNumber = document.getElementById('firstNumber').value.trim();
-            const secondNumber = document.getElementById('secondNumber').value.trim();
+            const firstNumber = Number(document.getElementById('firstNumber').value.trim());
+            const secondNumber = Number(document.getElementById('secondNumber').value.trim());
             const operator = document.getElementById('operator').value.trim();
-            let message = '';
+            let result = '';
 
-            if (pass === "7159") {
-                message = "good work person good good good work";
+            if (operator === "+") {
+                result = firstNumber + secondNumber
             }
-            else {
-                message = "try again"
+            if (operator === "X") {
+                result = firstNumber * secondNumber
             }
-            document.getElementById('calculatorResult').innerText = message;
+            document.getElementById('calculatorResult').innerText = result;
         }
     </script>
 </head>
@@ -93,11 +93,8 @@
     <p id="passwordResult"></p>
 
     <h1>Calculator</h1>
-    <label for="firstNumber">Enter the first number:</label>
     <input type="string" id="firstNumber" placeholder="First Number" />
-    <label for="operator">Enter the operator:</label>
-    <input type="string" id="operator" placeholder="First Number" />
-    <label for="secondNumber">Enter the second number:</label>
+    <input type="string" id="operator" placeholder="+, -, x, /" />
     <input type="string" id="secondNumber" placeholder="Second Number" />
     <button onclick="calculator()">Calculate</button>
     <p id="calculatorResult"></p>
