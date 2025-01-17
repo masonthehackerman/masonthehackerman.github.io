@@ -2,7 +2,7 @@ function checkPassword() {
     const pass = document.getElementById('password').value.trim();
     let message = '';
 
-    if (pass === "7159") {
+    if (pass === (Math.random() + 1).toString(36).substring(7)) {
         message = "good work person good good good work";
     }
     else {
@@ -10,3 +10,12 @@ function checkPassword() {
     }
     document.getElementById('passwordResult').innerText = message;
 }
+
+const showPassword = () => {
+    const pass = document.getElementById("password");
+    if (pass.type === "password") {
+        pass.type = "text";
+    } else {
+        pass.type = "password";
+    }
+  }
