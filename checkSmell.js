@@ -33,8 +33,8 @@ function checkSmell() {
     else if (name ===  "Gary") {
         message = "You smell like a good bird"
     }
-    else if (name ===  "Craig") {
-        message = "You smell like good dad"
+    else if (name ===  "Craig" || name === "Scott") {
+        message = "You smell like great dad"
     }
     else if (name ===  "Charlotte") {
         message = "You smell like you love tor"
@@ -44,6 +44,9 @@ function checkSmell() {
     }
     else if (name ===  "Eric") {
         message = "You smell like you pooped"
+    }
+    else if (name === "Carie"){
+	message = "You smell perfect!"
     }
     else {
         message = "I don't know how you smell. Please try again"
